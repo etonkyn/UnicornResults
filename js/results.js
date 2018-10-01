@@ -139,11 +139,11 @@ function showRoundSpeedResults(roundSpeedStatus) {
 }
 
 function getStarImage(num) {
-	if(num === 1) { return img("./img/1Star.png") }
-	if(num === 2) { return img("./img/2Stars.png") }
-	if(num === 3) { return img("./img/3Stars.png") }
-	if(num === 4) { return img("./img/4Stars.png") }
-	if(num === 5) { return img("./img/5Stars.png") }
+	if(num === 1) { return img("https://github.com/etonkyn/UnicornResults/blob/master/img/1Star.png") }
+	if(num === 2) { return img("https://github.com/etonkyn/UnicornResults/blob/master/img/2Stars.png") }
+	if(num === 3) { return img("https://github.com/etonkyn/UnicornResults/blob/master/img/3Stars.png") }
+	if(num === 4) { return img("https://github.com/etonkyn/UnicornResults/blob/master/img/4Stars.png") }
+	if(num === 5) { return img("https://github.com/etonkyn/UnicornResults/blob/master/img/5Stars.png") }
 }
 
 function img(loc) {
