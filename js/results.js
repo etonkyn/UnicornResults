@@ -139,11 +139,11 @@ function showRoundSpeedResults(roundSpeedStatus) {
 }
 
 function getStarImage(num) {
-	if(num === 1) { return img("/img/1Star.png") }
-	if(num === 2) { return img("/img/2Stars.png") }
-	if(num === 3) { return img("/img/3Stars.png") }
-	if(num === 4) { return img("/img/4Stars.png") }
-	if(num === 5) { return img("/img/5Stars.png") }
+	if(num === 1) { return img("/UnicornResults/img/1Star.png") }
+	if(num === 2) { return img("/UnicornResults/img/2Stars.png") }
+	if(num === 3) { return img("/UnicornResults/img/3Stars.png") }
+	if(num === 4) { return img("/UnicornResults/img/4Stars.png") }
+	if(num === 5) { return img("/UnicornResults/img/5Stars.png") }
 }
 
 function img(loc) {
@@ -155,25 +155,25 @@ function showUnicornResults(unicornStatus, unicornPercent) {
 
 	if(unicornStatus == 1) {
 		document.getElementById("unicornText").innerHTML = "You already look like a unicorn!  Way to go!"
-		document.getElementById("unicornImg").innerHTML = img("/img/unicorn3.png")
+		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn3.png")
 	}
 	if(unicornStatus == 2) {
 		document.getElementById("unicornText").innerHTML = "You're getting close to being a unicorn and on the right path!  Keep it up!"
 		//TODO: Replace the photo
-		document.getElementById("unicornImg").innerHTML = img("/img/unicorn3.png")
+		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn3.png")
 	}
 	if(unicornStatus == 3) {
 		document.getElementById("unicornText").innerHTML = "You've gotten pretty big, but your growth has slowed from what most unicorns have done."
-		document.getElementById("unicornImg").innerHTML = img("/img/unicorn1.png")
+		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn1.png")
 	}
 	if(unicornStatus == 4) {
 		document.getElementById("unicornText").innerHTML = "You're still early in the journey, but so far you're on the right path!"
-		document.getElementById("unicornImg").innerHTML = img("/img/unicorn1.png")
+		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn1.png")
 	}
 	if(unicornStatus == 5) {
 		document.getElementById("unicornText").innerHTML = "You're really early in the journey and not yet on the path most unicorns take."
 		//TODO: Replace teh photo
-		document.getElementById("unicornImg").innerHTML = img("/img/unicorn1.png")
+		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn1.png")
 	}
 
 }
