@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34b6c0a1-f54c-4a5f-a0f3-9e67df9c470e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/js/results.js" afterPath="$PROJECT_DIR$/js/results.js" />
       <change beforePath="$PROJECT_DIR$/sampleURL" afterPath="$PROJECT_DIR$/sampleURL" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,21 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="results.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="results.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/results.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="236" column="41" lean-forward="true" selection-start-line="236" selection-start-column="41" selection-end-line="236" selection-end-column="41" />
+            <state relative-caret-position="472">
+              <caret line="252" column="52" lean-forward="true" selection-start-line="252" selection-start-column="52" selection-end-line="252" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sampleURL" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sampleURL" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sampleURL">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="211" lean-forward="false" selection-start-line="0" selection-start-column="211" selection-end-line="0" selection-end-column="211" />
+              <caret line="0" column="73" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="212" />
               <folding />
             </state>
           </provider>
@@ -93,8 +94,8 @@
       <list>
         <option value="$PROJECT_DIR$/results.html" />
         <option value="$PROJECT_DIR$/results2.html" />
-        <option value="$PROJECT_DIR$/js/results.js" />
         <option value="$PROJECT_DIR$/sampleURL" />
+        <option value="$PROJECT_DIR$/js/results.js" />
       </list>
     </option>
   </component>
@@ -241,18 +242,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/results.js">
+    <entry file="file://$PROJECT_DIR$/sampleURL">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="236" column="41" lean-forward="true" selection-start-line="236" selection-start-column="41" selection-end-line="236" selection-end-column="41" />
+        <state relative-caret-position="0">
+          <caret line="0" column="73" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="212" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sampleURL">
+    <entry file="file://$PROJECT_DIR$/js/results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="211" lean-forward="false" selection-start-line="0" selection-start-column="211" selection-end-line="0" selection-end-column="211" />
+        <state relative-caret-position="472">
+          <caret line="252" column="52" lean-forward="true" selection-start-line="252" selection-start-column="52" selection-end-line="252" selection-end-column="52" />
           <folding />
         </state>
       </provider>
