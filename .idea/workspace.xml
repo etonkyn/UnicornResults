@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="34b6c0a1-f54c-4a5f-a0f3-9e67df9c470e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/js/results.js" afterPath="$PROJECT_DIR$/js/results.js" />
-      <change beforePath="$PROJECT_DIR$/sampleURL" afterPath="$PROJECT_DIR$/sampleURL" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +26,8 @@
       <file leaf-file-name="results.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/results.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="252" column="52" lean-forward="true" selection-start-line="252" selection-start-column="52" selection-end-line="252" selection-end-column="52" />
+            <state relative-caret-position="-2639">
+              <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -252,8 +251,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/results.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="252" column="52" lean-forward="true" selection-start-line="252" selection-start-column="52" selection-end-line="252" selection-end-column="52" />
+        <state relative-caret-position="-2639">
+          <caret line="50" column="25" lean-forward="true" selection-start-line="50" selection-start-column="25" selection-end-line="50" selection-end-column="25" />
           <folding />
         </state>
       </provider>

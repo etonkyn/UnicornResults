@@ -47,7 +47,7 @@ function age(y1, m1, y2, m2) {
 	return temp;
 }
 
-function age(date1, date2) {
+function ageOld(date1, date2) {
     dt1 = new Date(date1)
     dt2 = new Date(date2)
     return (dt1.getFullYear() - dt2.getFullYear()) * 12 + dt1.getMonth() - dt2.getMonth() + (dt1.getDate() - dt2.getDate())/30
