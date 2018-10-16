@@ -1,3 +1,52 @@
+function getMonth(month) {
+	if (month === "January") {
+		return 1;
+	}
+	if (month === "February") {
+		return 2;
+	}
+	if (month === "March") {
+		return 3;
+	}
+	if (month === "April") {
+		return 4;
+	}
+	if (month === "May") {
+		return 5;
+	}
+	if (month === "June") {
+		return 6;
+	}
+	if (month === "July") {
+		return 7;
+	}
+	if (month === "August") {
+		return 8;
+	}
+	if (month === "September") {
+		return 9;
+	}
+	if (month === "October") {
+		return 10;
+	}
+	if (month === "November") {
+		return 11;
+	}
+	if (month === "December") {
+		return 12;
+	}
+	return 6; //This shouldn't happen, but let's just split the differnece just in case
+}
+
+
+function age(y1, m1, y2, m2) {
+	let temp = (y1 - y2) * 12 + m1 - m2;
+	if (temp < 1) {
+		return 1;
+	}
+	return temp;
+}
+
 function age(date1, date2) {
     dt1 = new Date(date1)
     dt2 = new Date(date2)
@@ -180,17 +229,19 @@ function showUnicornResults(unicornStatus, unicornPercent) {
 
 var urlParams = new URLSearchParams(window.location.search)
 
-var foundedDate = urlParams.get('foundeddate')
-var firstRoundDate = urlParams.get('firstrounddate')
-var firstRoundAmt =urlParams.get('firstamt')
+var foundedMonth = getMonth(urlParams.get('foundedMonth'))
+var foundedYear = urlParams.get('foundedYear')
+var firstRoundMonth = getMonth(urlParams.get('firstRoundMonth'))
+var firstRoundYear = urlParams.get('firstRoundYear')
+var firstRoundAmt = urlParams.get('firstamt')
 var rounds = urlParams.get('totalrounds')
 var totalAmountRaised = urlParams.get('totalamt')
 var sector = urlParams.get('sector')
 var priorARRRaw = urlParams.get('lastarr')
 var arrGrowthRaw = urlParams.get('arrgrowth')
 
-let ageAtFirstRound = age(firstRoundDate, foundedDate)
-let ageNow = age("10/1/2018", foundedDate)
+let ageAtFirstRound = age(firstRoundYear, firstRoundMonth, foundedYear, foundedMonth)
+let ageNow = age(2018, 10, foundedYear, foundedMonth)
 let firstAmt = parseFloat(firstRoundAmt)
 let roundsPerYear = rounds / ageNow * 12
 let totalRaised = parseFloat(totalAmountRaised)
