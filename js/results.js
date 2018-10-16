@@ -44,7 +44,6 @@ function age(y1, m1, y2, m2) {
 	if (temp < 1) {
 		return 1;
 	}
-	console.log("returning age of: " + temp)
 	return temp;
 }
 
@@ -241,18 +240,14 @@ var sector = urlParams.get('sector')
 var priorARRRaw = urlParams.get('lastarr')
 var arrGrowthRaw = urlParams.get('arrgrowth')
 
-let ageAtFirstRound = age(firstRoundYear, firstRoundMonth, foundedYear, foundedMonth)
-let ageNow = age(2018, 10, foundedYear, foundedMonth)
-let firstAmt = parseFloat(firstRoundAmt)
-let roundsPerYear = rounds / ageNow * 12
-let totalRaised = parseFloat(totalAmountRaised)
-let priorarr = parseFloat(priorARRRaw)
-let arrGrowth = parseFloat(arrGrowthRaw)
+var ageAtFirstRound = age(firstRoundYear, firstRoundMonth, foundedYear, foundedMonth)
+var ageNow = age(2018, 10, foundedYear, foundedMonth)
+var firstAmt = parseFloat(firstRoundAmt)
+var roundsPerYear = rounds / ageNow * 12
+var totalRaised = parseFloat(totalAmountRaised)
+var priorarr = parseFloat(priorARRRaw)
+var arrGrowth = parseFloat(arrGrowthRaw)
 
-console.log("founded month: " + foundedMonth)
-console.log("founded year: " + foundedYear)
-console.log("first round month: " + firstRoundMonth)
-console.log("first round year: " + firstRoundYear)
 console.log("Age at first round: " + ageAtFirstRound)
 console.log("Age now: " + ageNow)
 console.log("Rounds: " + rounds)
