@@ -40,10 +40,11 @@ function getMonth(month) {
 
 
 function age(y1, m1, y2, m2) {
-	let temp = (y1 - y2) * 12 + m1 - m2;
+	var temp = (y1 - y2) * 12 + m1 - m2;
 	if (temp < 1) {
 		return 1;
 	}
+	console.log("returning age of: " + temp)
 	return temp;
 }
 
