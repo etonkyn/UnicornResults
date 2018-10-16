@@ -15,6 +15,16 @@
 
     </style>
 
+    <script type="text/javascript" src="/UnicornResults/js/email.js"></script>
+    <script type="text/javascript">
+
+      function signup() {
+        console.log("signup called")
+        sendEmail("New User signup", "test@gmail.com")
+      }
+
+    </script>
+
 </head>
 
 <body>
@@ -66,6 +76,10 @@
     <td><p id="roundSpeedImg" /></td>
 </tbody>
 </table>
+
+    <form name="signup" action="javascript:signup()">
+      <input name="Submit"  type="submit" value="Update"/>
+    </form>
 
 <script type="text/javascript" src="/UnicornResults/js/results.js"></script>
 </body>
