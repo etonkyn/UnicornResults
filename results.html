@@ -3,85 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Results</title>
-    <style>
-
-     body {
-        background-color: #99939E;
-        color: white;
-        font-size: 150%;
-        font-family: "Karla", "Times New Roman", Times, serif;
-    }
-
-    </style>
-
-    <script type="text/javascript" src="/UnicornResults/js/email.js"></script>
-    <script type="text/javascript">
-
-      function signup() {
-        console.log("signup called")
-        sendEmail("New User signup", "test@gmail.com")
-      }
-
-    </script>
-
 </head>
 
 <body>
-    <table width="60%">
-    <tbody>
-    <tr style="height: 324px;">
-    <td width="60%"><p id="unicornImg" /></td>
-    <td>
-    <h1 id="unicornPercent">&nbsp;% Unicorn</h1>
-    </td>
-    </tr>
-    <tr style="height: 84px;">
-    <td width="60%">
-    <p id="unicornText" style="text-align: left;">&nbsp;Unicorn Text</p>
-    </td>
-    <td>&nbsp;</td>
-    </tr>
 
-    <tr style="height: 20px;">
-    <td width="60%"><strong>&nbsp;First Round</strong></td>
-    <td>&nbsp;</td>
-    </tr>
-    <tr style="height: 40px;">
-    <td width="60%">
-    <p id="firstRoundText">&nbsp;First round text</p>
-    </td>
-    <td><p id="firstRoundImg" /></td>
-    </tr>
+    <p id="totalRaisedText"></p>
+    <p id="firstRoundText"></p>
+    <p id="roundSpeedText"></p>
+    <p id="unicornText"></p>
+    <p id="unicornPercent"></p>
+    <p id="totalRaisedImg"></p>
+    <p id="firstRoundImg"></p>
+    <p id="roundSpeedImg"></p>
+    <p id="unicornImg"></p>
 
-    <tr style="height: 20px;">
-    <td width="60%"><strong>&nbsp;Total Raised</strong></td>
-    <td>&nbsp;</td>
-    </tr>
-    <tr style="height: 40px;">
-    <td width="60%">
-    <p id="totalRaisedText">&nbsp;Total raised text</p>
-    </td>
-    <td><p id="totalRaisedImg" /></td>
-    </tr>
+    <script type="text/javascript" src="/UnicornResults/js/results.js"></script>
 
-    <tr style="height: 20px;">
-    <td width="60%"><strong>&nbsp;Speed of Raises</strong></td>
-    <td>&nbsp;</td>
-    </tr>
-    <tr style="height: 40px;">
-    <td width="60%">
-    <p id="roundSpeedText">&nbsp;Speed raised text</p>
-    </td>
-    <td><p id="roundSpeedImg" /></td>
-</tbody>
-</table>
-<hr>
-While this is a very simple, fun tool, we're working on creating a much more comprehensive startup valuation report that will give you an idea of how a VC would analyze and value your business.  If you're interested in trying it when we release the beta, please sign up below.
-    <form name="signup" action="javascript:signup()">
-        <input type="text" placeholder="Enter Email" name="email" style="width: 200px; height: 30px" required>
-        <button type="submit" class="signupbtn" style="width: 120px; height: 30px">Sign Up</button>
-    </form>
-
-<script type="text/javascript" src="/UnicornResults/js/results.js"></script>
+    <script>window.location.replace("https://etonkyn.github.io/UnicornResults/uber.html")</script>
 </body>
 </html>
