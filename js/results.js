@@ -227,6 +227,16 @@ function showUnicornResults(unicornStatus, unicornPercent) {
 
 }
 
+function similarCompany() {
+    var page = Math.floor(Math.random() * 2)
+    if(page == 0) {
+        return "uber.html"
+    }
+    if(page == 1) {
+        return "docusign.html"
+    }
+}
+
 var urlParams = new URLSearchParams(window.location.search)
 
 var foundedMonth = getMonth(urlParams.get('foundedMonth'))
@@ -275,3 +285,8 @@ showUnicornResults(unicornStatus, unicornPercent)
 showTotalRaisedResults(totalRaisedStatus)
 showFirstRoundResults(firstRoundStatus)
 showRoundSpeedResults(roundSpeedStatus)
+
+//Alternatively, just redirect to another page.  Use above calcs to pass parameters
+var params = "fm=" + foundedMonth + "&fy=" + foundedYear + "&ra=" + totalRaised + "&nr=" + rounds + "&ca=" + priorARRRaw + "&ag=" + arrGrowthRaw + "&un=" + unicornPercent + "&us=" + unicornStatus
+var page = similarCompany()
+window.location.replace("https://etonkyn.github.io/UnicornResults/" + page + "?" + params)
