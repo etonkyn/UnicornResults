@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Uber styled results page</title>
+    <script>var urlParams = new URLSearchParams(window.location.search)</script>
 </head>
 
 <body>
 Let's add a blurb on uber here
 
 Also let's insert a few numbers that we're pulling with js.
+<p id="test"></p>
+<script>document.getElementById('test').innerHTML = urlParams.get("test")</script>
 
 </body>
 </html>

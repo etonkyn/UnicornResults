@@ -281,10 +281,10 @@ console.log("roundSpeedStatus: " + roundSpeedStatus)
 console.log("unicornPercent: " + unicornPercent)
 
 //These need corresponding UI elements to modify
-showUnicornResults(unicornStatus, unicornPercent)
-showTotalRaisedResults(totalRaisedStatus)
-showFirstRoundResults(firstRoundStatus)
-showRoundSpeedResults(roundSpeedStatus)
+//showUnicornResults(unicornStatus, unicornPercent)
+//showTotalRaisedResults(totalRaisedStatus)
+//showFirstRoundResults(firstRoundStatus)
+//showRoundSpeedResults(roundSpeedStatus)
 
 //Alternatively, just redirect to another page.  Use above calcs to pass parameters
 var params = "fm=" + foundedMonth + "&fy=" + foundedYear + "&ra=" + totalRaised + "&nr=" + rounds + "&ca=" + priorARRRaw + "&ag=" + arrGrowthRaw + "&un=" + unicornPercent + "&us=" + unicornStatus
