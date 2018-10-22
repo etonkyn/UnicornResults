@@ -10,8 +10,24 @@
 Let's add a blurb on uber here
 
 Also let's insert a few numbers that we're pulling with js.
-<p id="test"></p>
-<script>document.getElementById('test').innerHTML = urlParams.get("test")</script>
+<p id="date"></p>
+<script>document.getElementById('date').innerHTML = urlParams.get("fm") + "/" + urlParams.get("fy")</script>
+
+<p id="raisedAmt"></p>
+<script>document.getElementById('raisedAmt').innerHTML = urlParams.get("ra")</script>
+
+<p id="raises"></p>
+<script>document.getElementById('raises').innerHTML = urlParams.get("nr")</script>
+
+<p id="arr"></p>
+<script>document.getElementById('arr').innerHTML = urlParams.get("ca")</script>
+
+<p id="growth"></p>
+<script>document.getElementById('growth').innerHTML = urlParams.get("ag")</script>
+
+<p id="percent"></p>
+<script>document.getElementById('percent').innerHTML = urlParams.get("un")</script>
+
 
 </body>
 </html>

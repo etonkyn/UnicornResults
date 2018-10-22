@@ -230,10 +230,10 @@ function showUnicornResults(unicornStatus, unicornPercent) {
 function similarCompany() {
     var page = Math.floor(Math.random() * 2)
     if(page == 0) {
-        return "uber.html"
+        return "mature-unicorn-airbnb"
     }
     if(page == 1) {
-        return "docusign.html"
+        return "mature-unicorn-airbnb"
     }
 }
 
@@ -289,4 +289,4 @@ console.log("unicornPercent: " + unicornPercent)
 //Alternatively, just redirect to another page.  Use above calcs to pass parameters
 var params = "fm=" + foundedMonth + "&fy=" + foundedYear + "&ra=" + totalRaised + "&nr=" + rounds + "&ca=" + priorARRRaw + "&ag=" + arrGrowthRaw + "&un=" + unicornPercent + "&us=" + unicornStatus
 var page = similarCompany()
-window.location.replace("https://etonkyn.github.io/UnicornResults/" + page + "?" + params)
+window.location.replace("https://fullinpartners.showitpreview.com/" + page + "?" + params)
