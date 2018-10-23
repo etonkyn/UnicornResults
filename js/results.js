@@ -289,4 +289,4 @@ console.log("unicornPercent: " + unicornPercent)
 //Alternatively, just redirect to another page.  Use above calcs to pass parameters
 var params = "fm=" + foundedMonth + "&fy=" + foundedYear + "&ra=" + totalRaised + "&nr=" + rounds + "&ca=" + priorARRRaw + "&ag=" + arrGrowthRaw + "&un=" + unicornPercent + "&us=" + unicornStatus
 var page = similarCompany()
-window.location.replace("https://fullinpartners.showitpreview.com/" + page + "?" + params)
+window.location.replace("http://fullinpartners.com/" + page + "?" + params)
