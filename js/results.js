@@ -301,6 +301,6 @@ console.log("unicornPercent: " + unicornPercent)
 //showRoundSpeedResults(roundSpeedStatus)
 
 //Alternatively, just redirect to another page.  Use above calcs to pass parameters
-var params = "un=" + unicornPercent + "&ag=" + ageNow + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
+var params = "un=" + unicornPercent + "&ag=" + ageInYears + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
 var page = similarCompany(unicornStatus)
 window.location.replace("http://fullinpartners.com/" + page + "?" + params)
