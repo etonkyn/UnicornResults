@@ -286,6 +286,7 @@ let totalRaisedStatus = getTotalRaisedStatus(totalRaised, ageNow)
 let firstRoundStatus = getFirstRoundStatus(firstAmt)
 let roundSpeedStatus = getRoundSpeedStatus(roundsPerYear)
 let unicornPercent = getUnicornPercent(unicornStatus, totalRaisedStatus, firstRoundStatus, roundSpeedStatus)
+let ageInYears = Math.round( (ageNow / 12) * 10) / 10
 
 console.log("\n\nUnicorn status: " + unicornStatus)
 console.log("totalRaisedStatus: " + totalRaisedStatus)
