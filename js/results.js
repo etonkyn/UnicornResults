@@ -227,8 +227,21 @@ function showUnicornResults(unicornStatus, unicornPercent) {
 
 }
 
-function similarCompany() {
+function similarCompany(unicornStatus) {
     var page = Math.floor(Math.random() * 2)
+    if(unicornStatus == 1) {
+        return "airbnb"
+    }
+    if(unicornStatus == 2) {
+        if(page == 0) {
+            return "rovio"
+        }
+        return "squarespace"
+    }
+    if(unicornStatus = 4) {
+        return "quora"
+    }
+
     if(page == 0) {
         return "mature-unicorn-airbnb"
     }
@@ -251,7 +264,7 @@ var priorARRRaw = urlParams.get('lastarr')
 var arrGrowthRaw = urlParams.get('arrgrowth')
 
 var ageAtFirstRound = age(firstRoundYear, firstRoundMonth, foundedYear, foundedMonth)
-var ageNow = age(2018, 10, foundedYear, foundedMonth)
+var ageNow = age(2018, 11, foundedYear, foundedMonth)
 var firstAmt = parseFloat(firstRoundAmt)
 var roundsPerYear = rounds / ageNow * 12
 var totalRaised = parseFloat(totalAmountRaised)
@@ -287,6 +300,6 @@ console.log("unicornPercent: " + unicornPercent)
 //showRoundSpeedResults(roundSpeedStatus)
 
 //Alternatively, just redirect to another page.  Use above calcs to pass parameters
-var params = "fm=" + foundedMonth + "&fy=" + foundedYear + "&ra=" + totalRaised + "&nr=" + rounds + "&ca=" + priorARRRaw + "&ag=" + arrGrowthRaw + "&un=" + unicornPercent + "&us=" + unicornStatus
-var page = similarCompany()
+var params = "un=" + unicornPercent + "&ag=" + ageNow + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
+var page = similarCompany(unicornStatus)
 window.location.replace("http://fullinpartners.com/" + page + "?" + params)
