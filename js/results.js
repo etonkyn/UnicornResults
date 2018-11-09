@@ -263,6 +263,10 @@ var sector = urlParams.get('sector')
 var priorARRRaw = urlParams.get('lastarr')
 var arrGrowthRaw = urlParams.get('arrgrowth')
 
+if(rounds == 1) {
+    totalAmountRaised = firstRoundAmt
+}
+
 var ageAtFirstRound = age(firstRoundYear, firstRoundMonth, foundedYear, foundedMonth)
 var ageNow = age(2018, 11, foundedYear, foundedMonth)
 var firstAmt = parseFloat(firstRoundAmt)
