@@ -94,7 +94,7 @@ function getUnicornPercent(unicornStatus, totalRaisedStatus, firstRoundStatus, r
 	if (unicornStatus === 1) { per = 90}
 	if (unicornStatus === 2) { per = 70}
 	if (unicornStatus === 3) { per = 50}
-	if (unicornStatus === 4) { per = 40}
+	if (unicornStatus === 4) { per = 30}
 	if (unicornStatus === 5) { per = 10}
 
 	if(totalRaisedStatus === 1) { per = per + 7 }
@@ -114,13 +114,14 @@ function getUnicornPercent(unicornStatus, totalRaisedStatus, firstRoundStatus, r
 	return per;
 }
 
-/* Unicorn status codes
-1 - Already a unicorn
-2 - Close to unicorn and growing
-3 - Big but not growing
-4 - small to mid and on the path
-5 - small to mid and not on path
+/* Unicorn Matching
+1 - Already Unicorn - high arr or raise
+2 - Strong revenue, close to unicorn
+3 - Steady growth, young with decent numbers?
+4 - Big raise, but not unicorn level
+5 - Off track
 */
+
 function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
 	if(priorarr > 100 || totalRaised > 500) {
 		return 1;
@@ -128,104 +129,21 @@ function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
 	if(priorarr > 35 && arrGrowth > 75) {
 		return 2;
 	}
-	if(totalRaised > 100 && ageNow < 96 && arrGrowth > 25) {
-		return 2;
-	}
-	if(totalRaised > 100) {
+	if(totalRaised > 100 && ageNow < 96 && arrGrowth > 25 && priorarr > 25) {
 		return 3;
 	}
-	if(totalRaised > 20 && ageNow < 36) {
-		return 4;
+	if(totalRaised > 25 && ageNow < 36 && arrGrowth > 50) {
+	    return 3;
 	}
-	if(priorarr > 5 && arrGrowth > 100) {
+	if(priorarr > 5 && arrGrowth > 100 && ageNow < 48) {
+	    return 3;
+	}
+	if(totalRaised > 100) {
 		return 4;
 	}
 	return 5;
 }
 
-function showTotalRaisedResults(totalRaisedStatus) {
-	if(totalRaisedStatus === 1) {
-		document.getElementById("totalRaisedImg").innerHTML = getStarImage(5)
-		document.getElementById("totalRaisedText").innerHTML = "The amount of funding raised at this stage of a company looks a whole lot like a unicorn in the making!"
-	}
-	if(totalRaisedStatus === 2) {
-		document.getElementById("totalRaisedImg").innerHTML = getStarImage(4)
-		document.getElementById("totalRaisedText").innerHTML = "You've raised a lot of funding pretty fast, but many unicorns do even more."
-	}
-	if(totalRaisedStatus === 3) {
-		document.getElementById("totalRaisedImg").innerHTML = getStarImage(3)
-		document.getElementById("totalRaisedText").innerHTML = "The funding you've raised so far is pretty normal for successful companies, but not necessarily unicorns."
-	}
-	if(totalRaisedStatus === 4) {
-		document.getElementById("totalRaisedImg").innerHTML = getStarImage(1)
-		document.getElementById("totalRaisedText").innerHTML = "The funding you've done so far doesn't look like most unicorns of the past few decades."
-	}
-}
-
-function showFirstRoundResults(firstRoundStatus) {
-	if(firstRoundStatus === 1) {
-		document.getElementById("firstRoundImg").innerHTML = getStarImage(5)
-		document.getElementById("firstRoundText").innerHTML = "Many unicorns have quickly raised large early rounds, just as you have!"
-	}
-
-	document.getElementById("firstRoundImg").innerHTML = getStarImage(3)
-	document.getElementById("firstRoundText").innerHTML = "Your first round is in a normal range, not predictive one way or another of becoming a unicorn."
-}
-
-function showRoundSpeedResults(roundSpeedStatus) {
-	if(roundSpeedStatus === 1) {
-		document.getElementById("roundSpeedImg").innerHTML = getStarImage(5)
-		document.getElementById("roundSpeedText").innerHTML = "The speed at which you've raised additional funding looks just like a future unicorn!"
-	}
-	if(roundSpeedStatus === 2) {
-		document.getElementById("roundSpeedImg").innerHTML = getStarImage(3)
-		document.getElementById("roundSpeedText").innerHTML = "You've raised additoinal funding at an average pace for successful startups, not predictive either way of being a unicorn"
-	}
-	if(roundSpeedStatus === 3) {
-		document.getElementById("roundSpeedImg").innerHTML = getStarImage(1)
-		document.getElementById("roundSpeedText").innerHTML = "You've been raising additional funding a fair bit slower than most unicorns in recent history."
-	}
-}
-
-function getStarImage(num) {
-	if(num === 1) { return img("/UnicornResults/img/1Star.png") }
-	if(num === 2) { return img("/UnicornResults/img/2Stars.png") }
-	if(num === 3) { return img("/UnicornResults/img/3Stars.png") }
-	if(num === 4) { return img("/UnicornResults/img/4Stars.png") }
-	if(num === 5) { return img("/UnicornResults/img/5Stars.png") }
-}
-
-function img(loc) {
-    return "<img src=" + loc + ">"
-}
-
-function showUnicornResults(unicornStatus, unicornPercent) {
-	document.getElementById("unicornPercent").innerHTML = unicornPercent + "% Unicorn"
-
-	if(unicornStatus == 1) {
-		document.getElementById("unicornText").innerHTML = "You already look like a unicorn!  Way to go!"
-		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn3.png")
-	}
-	if(unicornStatus == 2) {
-		document.getElementById("unicornText").innerHTML = "You're getting close to being a unicorn and on the right path!  Keep it up!"
-		//TODO: Replace the photo
-		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn3.png")
-	}
-	if(unicornStatus == 3) {
-		document.getElementById("unicornText").innerHTML = "You've gotten pretty big, but your growth has slowed from what most unicorns have done."
-		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn1.png")
-	}
-	if(unicornStatus == 4) {
-		document.getElementById("unicornText").innerHTML = "You're still early in the journey, but so far you're on the right path!"
-		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn1.png")
-	}
-	if(unicornStatus == 5) {
-		document.getElementById("unicornText").innerHTML = "You're really early in the journey and not yet on the path most unicorns take."
-		//TODO: Replace teh photo
-		document.getElementById("unicornImg").innerHTML = img("/UnicornResults/img/unicorn1.png")
-	}
-
-}
 
 function similarCompany(unicornStatus) {
     var page = Math.floor(Math.random() * 2)
@@ -238,16 +156,22 @@ function similarCompany(unicornStatus) {
         }
         return "squarespace"
     }
+    if(unicornStatus == 3) {
+        if(page == 0) {
+            return "workday"
+        }
+        return "cloudera"
+    }
     if(unicornStatus = 4) {
         return "quora"
     }
+    if(unicornStatus == 5) {
+        if(page == 0) {
+            return "creditkarma"
+        }
+        return "slack"
+    }
 
-    if(page == 0) {
-        return "mature-unicorn-airbnb"
-    }
-    if(page == 1) {
-        return "mature-unicorn-airbnb"
-    }
 }
 
 var urlParams = new URLSearchParams(window.location.search)
@@ -298,11 +222,6 @@ console.log("firstRoundStatus: " + firstRoundStatus)
 console.log("roundSpeedStatus: " + roundSpeedStatus)
 console.log("unicornPercent: " + unicornPercent)
 
-//These need corresponding UI elements to modify
-//showUnicornResults(unicornStatus, unicornPercent)
-//showTotalRaisedResults(totalRaisedStatus)
-//showFirstRoundResults(firstRoundStatus)
-//showRoundSpeedResults(roundSpeedStatus)
 
 //Alternatively, just redirect to another page.  Use above calcs to pass parameters
 var params = "un=" + unicornPercent + "&ag=" + ageInYears + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
