@@ -123,22 +123,22 @@ function getUnicornPercent(unicornStatus, totalRaisedStatus, firstRoundStatus, r
 */
 
 function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
-	if(priorarr > 100 || totalRaised > 500) {
+	if(priorarr >= 100 || totalRaised >= 500) {
 		return 1;
 	}
-	if(priorarr > 35 && arrGrowth > 75) {
+	if(priorarr >= 35 && arrGrowth >= 75) {
 		return 2;
 	}
-	if(totalRaised > 100 && ageNow < 96 && arrGrowth > 25 && priorarr > 25) {
+	if(totalRaised >= 100 && ageNow < 96 && arrGrowth >= 25 && priorarr >= 25) {
 		return 3;
 	}
-	if(totalRaised > 25 && ageNow < 36 && arrGrowth > 50) {
+	if(totalRaised >= 25 && ageNow < 48 && arrGrowth > 50) {
 	    return 3;
 	}
-	if(priorarr > 5 && arrGrowth > 100 && ageNow < 48) {
+	if(priorarr > 5 && arrGrowth > 90 && ageNow < 48) {
 	    return 3;
 	}
-	if(totalRaised > 100) {
+	if(totalRaised >= 100) {
 		return 4;
 	}
 	return 5;
