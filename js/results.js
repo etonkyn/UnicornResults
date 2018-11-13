@@ -227,7 +227,7 @@ console.log("roundSpeedStatus: " + roundSpeedStatus)
 console.log("unicornPercent: " + unicornPercent)
 
 
-if(redirect != 'no') {
+if(redirect != 1) {
     var params = "un=" + unicornPercent + "&ag=" + ageInYears + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
     var page = similarCompany(unicornStatus)
     window.location.replace("http://fullinpartners.com/" + page + "?" + params)
