@@ -189,6 +189,7 @@ var totalAmountRaised = urlParams.get('totalamt')
 var sector = urlParams.get('sector')
 var priorARRRaw = urlParams.get('lastarr')
 var arrGrowthRaw = urlParams.get('arrgrowth')
+var redirect = urlParams.get('redirect')
 
 if(rounds == 1) {
     totalAmountRaised = firstRoundAmt
@@ -226,7 +227,8 @@ console.log("roundSpeedStatus: " + roundSpeedStatus)
 console.log("unicornPercent: " + unicornPercent)
 
 
-//Alternatively, just redirect to another page.  Use above calcs to pass parameters
-var params = "un=" + unicornPercent + "&ag=" + ageInYears + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
-var page = similarCompany(unicornStatus)
-window.location.replace("http://fullinpartners.com/" + page + "?" + params)
+if(redirect != 'no') {
+    var params = "un=" + unicornPercent + "&ag=" + ageInYears + "&ra=" + totalRaised + "&nr=" + rounds + "&re=" + priorARRRaw + "&rg=" + arrGrowthRaw
+    var page = similarCompany(unicornStatus)
+    window.location.replace("http://fullinpartners.com/" + page + "?" + params)
+}
