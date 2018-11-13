@@ -129,6 +129,9 @@ function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
 	if(priorarr >= 35 && arrGrowth >= 75) {
 		return 2;
 	}
+	if(priorarr >= 25 && arrGrowth >= 100) {
+	    return 2;
+	}
 	if(totalRaised >= 100 && ageNow < 96 && arrGrowth >= 25 && priorarr >= 25) {
 		return 3;
 	}
