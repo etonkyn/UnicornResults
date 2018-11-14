@@ -123,10 +123,15 @@ function getUnicornPercent(unicornStatus, totalRaisedStatus, firstRoundStatus, r
 */
 
 function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
+    var growth = arrGrowth/100+1
+    var nextarr = priorarr * growth
 	if(priorarr >= 100 || totalRaised >= 500) {
 		return 1;
 	}
-	if(priorarr * (arrGrowth/100+1) >= 70 && arrGrowth >= 30 && priorarr >= 20) {
+	if(nextarr >= 70 && arrGrowth >= 40 && priorarr >= 25) {
+		return 2;
+	}
+	if(nextarr >= 100 && arrGrowth >= 25 && priorarr >= 20) {
 		return 2;
 	}
 	if(totalRaised >= 100 && ageNow < 96 && arrGrowth >= 25 && priorarr >= 25) {
@@ -190,6 +195,12 @@ var redirect = urlParams.get('redirect')
 
 if(rounds == 1) {
     totalAmountRaised = firstRoundAmt
+}
+if(rounds == 0) {
+    totalAmountRaised = 0
+    firstRoundAmt = 0
+    firstRoundMonth = 11
+    firstRoundYear = 2018
 }
 
 var ageAtFirstRound = age(firstRoundYear, firstRoundMonth, foundedYear, foundedMonth)
