@@ -194,7 +194,7 @@ var arrGrowthRaw = urlParams.get('arrgrowth')
 var redirect = urlParams.get('redirect')
 
 if(rounds == 1) {
-    totalAmountRaised = firstRoundAmt
+    firstRoundAmt = totalAmountRaised
 }
 if(rounds == 0) {
     totalAmountRaised = 0
