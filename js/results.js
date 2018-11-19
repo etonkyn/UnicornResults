@@ -128,10 +128,10 @@ function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
 	if(priorarr >= 100 || totalRaised >= 500) {
 		return 1;
 	}
-	if(nextarr >= 70 && arrGrowth >= 40 && priorarr >= 25) {
+	if(nextarr >= 70 && arrGrowth >= 50 && priorarr >= 25) {
 		return 2;
 	}
-	if(nextarr >= 100 && arrGrowth >= 25 && priorarr >= 20) {
+	if(nextarr >= 100 && arrGrowth >= 35 && priorarr >= 20) {
 		return 2;
 	}
 	if(totalRaised >= 100 && ageNow < 96 && arrGrowth >= 25 && priorarr >= 25) {
@@ -141,6 +141,9 @@ function getUnicornStatus(priorarr, arrGrowth, totalRaised, ageNow) {
 	    return 3;
 	}
 	if(priorarr * arrGrowth / 50 >= Math.pow(2, (ageNow/12)) && ageNow >= 24) {
+	    return 3;
+	}
+	if(nextarr >= 90 && arrGrowth >= 20) {
 	    return 3;
 	}
 	if(totalRaised >= 100) {
