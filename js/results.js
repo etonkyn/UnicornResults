@@ -167,7 +167,7 @@ function similarCompany(unicornStatus) {
         }
         return "cloudera"
     }
-    if(unicornStatus = 4) {
+    if(unicornStatus == 4) {
         return "quora"
     }
     if(unicornStatus == 5) {
