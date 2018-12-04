@@ -182,6 +182,27 @@ function similarCompany(unicornStatus) {
 
 }
 
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+var foundedMonth = getMonth(getUrlVars()['foundedMonth'])
+var foundedYear = getUrlVars()['foundedYear']
+var firstRoundMonth = getMonth(getUrlVars()['firstRoundMonth'])
+var firstRoundYear = getUrlVars()['firstRoundYear']
+var firstRoundAmt = getUrlVars()['firstamt']
+var rounds = getUrlVars()['totalrounds']
+var totalAmountRaised = getUrlVars()['totalamt']
+var sector = getUrlVars()['sector']
+var priorARRRaw = getUrlVars()['lastarr']
+var arrGrowthRaw = getUrlVars()['arrgrowth']
+var redirect = getUrlVars()['redirect']
+
+/*
 var urlParams = new URLSearchParams(window.location.search)
 
 var foundedMonth = getMonth(urlParams.get('foundedMonth'))
@@ -195,6 +216,7 @@ var sector = urlParams.get('sector')
 var priorARRRaw = urlParams.get('lastarr')
 var arrGrowthRaw = urlParams.get('arrgrowth')
 var redirect = urlParams.get('redirect')
+*/
 
 if(rounds == 1) {
     firstRoundAmt = totalAmountRaised
